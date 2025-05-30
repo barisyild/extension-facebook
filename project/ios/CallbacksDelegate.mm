@@ -6,6 +6,10 @@
 #import <FBSDKCoreKit/FBSDKCoreKit-Swift.h>
 
 
+@implementation NMEAppDelegate
+
+@end
+
 @implementation NMEAppDelegate (CallbacksDelegate)
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
