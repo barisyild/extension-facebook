@@ -2,12 +2,20 @@
 
 @class CallbacksDelegate;
 
-@interface CallbacksDelegate : NSObject <UIApplicationDelegate>
-
+@interface SDLUIKitDelegate : NSObject <UIApplicationDelegate>
 @end
 
-@interface NMEAppDelegate : NSObject <UIApplicationDelegate>
+@interface MyDelegate : SDLUIKitDelegate
 @end
 
-@interface NMEAppDelegate (CallbacksDelegate)
+// Add a 'category' to the SDL app delegate class
+@interface SDLUIKitDelegate (extra)
+{
+}
+@end
+
+@implementation SDLUIKitDelegate (extra)
++ (NSString *)getAppDelegateClassName {
+    return @"MyDelegate";
+}
 @end
